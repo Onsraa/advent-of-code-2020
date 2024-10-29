@@ -1,4 +1,7 @@
+use std::time::Instant;
 fn main(){
+
+    let start = Instant::now();
 
     let year = 2020;
     let values = [
@@ -220,6 +223,9 @@ fn main(){
     for i in 1..temp.len() {
         result *= temp[i];
     }
+
+    let duration = start.elapsed();
+    println!("Execution time : {:?}", duration);
 
     println!("Result {result}");
 }
